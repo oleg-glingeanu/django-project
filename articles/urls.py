@@ -16,5 +16,6 @@ urlpatterns=[
      path('<int:pk>/delete/',
         ArticleDeleteView.as_view(), name='article_delete'), # new
     path('new/', ArticleCreateView.as_view(), name='article_new'), # new
+    path('events/', ArticleListView.as_view(), name='events'),
     path('', ArticleListView.as_view(), name='article_list'),
 ]

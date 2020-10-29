@@ -9,7 +9,7 @@
       </div>
       <div class="card-body">
         <!-- Changes start here! -->
-        <p>{{ article.body }}</p>
+        <p>{{ article.body | safe }}</p>
         <a href="{% url 'article_edit' article.pk %}">Edit</a> |
         <a href="{% url 'article_delete' article.pk %}">Delete</a>
       </div>
