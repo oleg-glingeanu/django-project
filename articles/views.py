@@ -40,4 +40,3 @@ class ArticleCreateView(LoginRequiredMixin, CreateView): # new
     def form_valid(self, form): # new
         form.instance.author = self.request.user
         return super().form_valid(form)
-

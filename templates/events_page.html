@@ -1,41 +1,54 @@
 {% extends 'base.html' %}
 {% block title %}Home{% endblock title %}
 {% block content %}
-<article class="film_review">
-    <header>
-      <h2>Jurassic Park</h2>
-    </header>
-    <section class="main_review">
-      <p>Dinos were great!</p>
-    </section>
-    <section class="user_reviews">
-      <article class="user_review">
-        <p>Way too scary for me.</p>
-        <footer>
-          <p>
-            Posted on
-            <time datetime="2015-05-16 19:00">May 16</time>
-            by Lisa.
-          </p>
-        </footer>
-      </article>
-      <article class="user_review">
-        <p>I agree, dinos are my favorite.</p>
-        <footer>
-          <p>
-            Posted on
-            <time datetime="2015-05-17 19:00">May 17</time>
-            by Tom.
-          </p>
-        </footer>
-      </article>
-    </section>
-    <footer>
-      <p>
-        Posted on
-        <time datetime="2015-05-15 19:00">May 15</time>
-        by Staff.
-      </p>
-    </footer>
-  </article>
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>EVENTS</title>
+  <h2 style="text-align: center ";>MILLER GROVE UPCOMING EVENTS</h2>
+  <h2 style="text-align: center ";>FOR OCTOBER</h2>
+    </head>
+    <body>
+<div class="container-fluid">
+  <div class="row">
+<div class="col-sm-3 mt-3">
+    <div class="card">
+  <div class="card-body bg-light">
+      Monday 5th
+  </div>
+    </div>
+</div>
+<div class="col-sm-3 mt-3">
+    <div class="card">
+  <div class="card-body bg-light">
+      Old-style
+  </div>
+    </div>
+</div>
+<div class="col-sm-3 mt-3">
+    <div class="card">
+  <div class="card-body bg-light">
+      Handheld
+  </div>
+    </div>
+</div>
+<div class="col-sm-3 mt-3">
+    <div class="card">
+  <div class="card-body bg-light">
+      Robotic
+  </div>
+    </div>
+</div>
+  </div>
+  <div class="container-fluid">
+<div class="fixed-bottom bg-secondary text-light p-3">
+    Website created by ABC Sights
+</div>
+  </div>
+</div>
+</body>
+</html>
 {% endblock content %}
