@@ -1,9 +1,22 @@
 {% extends 'base.html' %}
-{% block title %}Home{% endblock title %}
+{% block title %}Covid on Campus{% endblock title %}
 {% block content %}
-<article class="film_review">
-    <header>
-      <h1>Covid Page</h1>
-    </header>
-  </article>
+{% load static %}
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="text-center display-3">HSE Guidelines</h1>
+    <p class="text-center"><a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/articles/2/" role="button">Learn more on Our Covid Page »</a></p>
+    <br>
+    <img src="{% static '/images/covid-19.jpg'%}" style="
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 85%;">
+  </div>
+
+<hr>
+
+
+ 
+
 {% endblock content %}

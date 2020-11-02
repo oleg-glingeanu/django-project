@@ -1,45 +1,38 @@
 {% extends 'base.html' %}
-{% block title %}Home{% endblock title %}
+{% load static %}
+{% block title %}Miller Grove - News{% endblock title %}
 {% block content %}
-<div class="header">
-  <h2>Blog Name</h2>
-</div>
-
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-    </div>
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
-    </div>
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">Covid on Campus</h1>
+    <p>Keep yourself protected</p>
+    <p><a class="btn btn-primary btn-lg" href="{% url 'covid_page' %}" role="button">Learn more »</a></p>
   </div>
 </div>
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Higher Options</h2>
+      <p>About Higher Options at Miller Grove</p>
+      <p><a class="btn btn-secondary" href="http://127.0.0.1:8000/articles/4/" role="button">Higher Options»</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Events Timetable</h2>
+      <p>Keep yourself updated</p>
+      <p><a class="btn btn-secondary" href="{% url 'events_page' %}" role="button">Timetable »</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Condensed Info</h2>
+      <p>View Articles</p>
+      <p><a class="btn btn-secondary" href="{% url 'article_list' %}" role="button">View details »</a></p>
+    </div>
+  </div>
+
+  <hr>
+
+</div> <!-- /container -->
+
+</main>
+
 {% endblock content %}
