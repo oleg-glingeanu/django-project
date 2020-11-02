@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+  {% load static %}
   <meta charset="utf-8">
   <title>{% block title %}Newspaper App{% endblock title %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link id="mystylesheet"  rel="stylesheet" type="text/css" href="{% static 'css/light.css' %}">
 </head>
 <body style="background-color: #85DCB3;">
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #41b3a3;">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #41b3a3;">
     <a class="navbar-brand" href="{% url 'home' %}">Miller Grove High School</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" 
     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
@@ -34,7 +36,14 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item"><a href="{% url 'article_new' %}"> + New Article </a></li>
       </ul>
-      
+      <ul>
+        <button class="btn btn-light" onclick="swapStyle('light.css')">Light Mode</button>
+      </ul>
+      <ul>
+        <button class="btn btn-dark" onclick="swapStyle('dark.css')">Dark Mode</button>
+      </ul>
+  
+  
  {% endif %}
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
@@ -63,12 +72,63 @@
       {% endif %}
     </div>
   </nav>
+  
   <main>
     <div class="container">
       {% block content %}
       {% endblock content %}
     </div>
+    
   </main>
+  <footer style="background-color:#41b3a3;" class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+        <small class="d-block mb-3 text-muted">© 2020-2021 All Rights Reserved.</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Miller Grove Home</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Home</a></li>
+          <li><a class="text-muted" href="#">About</a></li>
+          <li><a class="text-muted" href="#">Study at Miller Grove</a></li>
+          <li><a class="text-muted" href="#">Campus</a></li>
+          <li><a class="text-muted" href="#">Facilities</a></li>
+          <li><a class="text-muted" href="#">Work</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Facebook</a></li>
+          <li><a class="text-muted" href="#">Twitter</a></li>
+          <li><a class="text-muted" href="#">Email</a></li>
+          <li><a class="text-muted" href="#">Useful Links</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Information</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Business</a></li>
+          <li><a class="text-muted" href="#">Education</a></li>
+          <li><a class="text-muted" href="#">Government</a></li>
+          <li><a class="text-muted" href="#">School</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Staff</a></li>
+          <li><a class="text-muted" href="#">Locations</a></li>
+          <li><a class="text-muted" href="#">Privacy</a></li>
+          <li><a class="text-muted" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <hr>
+  
 
 
   <!-- Optional JavaScript -->
@@ -78,5 +138,4 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
-
 
