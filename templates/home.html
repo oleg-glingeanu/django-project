@@ -2,23 +2,17 @@
 {% load static %}
 {% block title %}Miller Grove - Home{% endblock title %}
 {% block content %}
-{% load static %}
-<body data-new-gr-c-s-check-loaded="14.982.0">
-  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-    <div class="col-md-5 p-lg-5 mx-auto my-5">
-      <h1 class="display-4 font-weight-normal">Welcome</h1>
-      <p class="lead font-weight-normal">to Miller Grove Highschool!</p>
-    </div>
-    <div class="product-device box-shadow d-none d-md-block"></div>
-    <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
-    <a class="btn btn-primary btn-lg" href="{% url 'news_page' %}"
-    role="button">Go to News Page</a>
-  </p>
-  </div>
-</body>
-<img src="{% static '/images/logo.jpg'%}" style="
-display: block;
-margin-left: auto;
-margin-right: auto;
-width: 50%;">
+<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}" />
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="text-center display-3">Welcome</h1>
+    <h1 class="text-center display-8">to Miller Grove Highschool!</h1>
+    <p class="text-center"><a class="btn btn-primary btn-lg" href="{% url 'news_page' %}" role="button">Check out our News Page!</a></p>
+    <br>
+    <img src="{% static '/images/logo.jpg'%}" style="
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;">
+      </div>
 {% endblock content %}

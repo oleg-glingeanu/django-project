@@ -1,0 +1,9 @@
+.jumbotron {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65% 100%;
+}
+
+.active {
+    background-color: red
+}
