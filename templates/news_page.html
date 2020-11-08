@@ -4,8 +4,15 @@
 {% block content %}
 <div class="jumbotron">
   <div class="container">
-    <h1 class="display-3">Covid on Campus</h1>
-    <p>Keep yourself protected</p>
+    <h1 style="font-weight: bold" class="display-3">Covid on Campus</h1>
+    <br>
+    <img src="{% static '/images/wear_mask.jpg'%}" style="
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    width: 85%;">
+    <br>
+    <p style="font-style: italic">Keep yourself protected!</p>
     <p><a class="btn btn-primary btn-lg" href="{% url 'covid_page' %}" role="button">Learn more »</a></p>
   </div>
 </div>
@@ -29,6 +36,30 @@
     </div>
   </div>
 
+  <div class="jumbotron">
+    <div class="container">
+      <h2>MGHS Boys Basketball Tryouts November 4, 2020</h2>
+      <img src="{% static '/images/mghsbb.jpeg'%}" style="
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 85%;">
+      <br>
+      <p>Good afternoon Miller Grove Student-Athletes and Parents,
+        It’s that time of year again! Boys’ basketball tryouts will be Wednesday, November 4, 2020 from 5:15pm –
+        7:15pm. Students are to report at 5:00pm for check-in each day. Tryouts will be held that Wednesday, Thursday,
+        and Friday in the gym for both varsity and junior varsity athletes.
+        Athletes must be dressed for tryouts, NO locker room usage/ access. Everyone must have a mask to enter and
+        bring their own water bottle and temperature will be taken at the door. No spectators are allowed in the gym,
+        only athletes that’s trying out will be allowed. <br>All students MUST have these 5 REQUIRED forms completed and
+        filled out before they can enter the gym for tryouts.
+        <br>Athletic Physical
+        <br>Return Participation Form
+        <br>Cardiac Arrest Form
+        <br>Concussion Form
+        <br>Emergency Medical Card </p>
+    </div>
+  </div>
   <hr>
 
 </div> <!-- /container -->
