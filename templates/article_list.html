@@ -10,15 +10,18 @@
       <div class="card-body">
         <!-- Changes start here! -->
         <p>{{ article.body | safe }}</p>
+          {% if user.id == article.author.id %}
         <a href="{% url 'article_edit' article.pk %}">Edit</a> |
-        <a href="{% url 'article_delete' article.pk %}">Delete</a>
+        <a href="{% url 'article_delete' article.pk %}">Delete</a> |
+        {% endif %}
+        <a href="{% url 'comment_new' article.pk %}">Comment on Article</a>
       </div>
       <div class="card-footer">
         {% for comment in article.comments.all %}
-          <p>
-            <span class="font-weight-bold">{{ comment.author }} &middot;</span>
-            {{ comment }}
-          </p>
+
+            <span class="font-weight-bold">{{ comment.author }}  &middot;</span>
+            {{ comment | safe }}
+          <br>
         {% endfor %}
       </div>
       <!-- Changes end here! -->

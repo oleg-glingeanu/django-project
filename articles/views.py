@@ -2,7 +2,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import ListView, DetailView # new
 from django.views.generic.edit import UpdateView, DeleteView, CreateView
 from django.urls import reverse_lazy # new
-from .models import Article
+from .models import Article , Comment
 
 
 # Create your views here.
@@ -40,3 +40,12 @@ class ArticleCreateView(LoginRequiredMixin, CreateView): # new
     def form_valid(self, form): # new
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+class Add_Comment(LoginRequiredMixin, CreateView): # new
+    model = Comment
+    fields = ('article','comment')
+    template_name = 'comment_new.html'
+
+    def form_valid(self, form): # new
+        form.instance.author = self.request.user
+        return super().form_valid(form)       

@@ -29,7 +29,7 @@ class Comment(models.Model): # new
         on_delete=models.CASCADE,
         related_name='comments', # new
     )
-    comment = models.CharField(max_length=140)
+    comment = models.CharField(max_length=255)
     author = models.ForeignKey(
         get_user_model(),
         on_delete=models.CASCADE,
